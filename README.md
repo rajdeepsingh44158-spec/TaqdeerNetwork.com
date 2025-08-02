@@ -23,7 +23,7 @@ vice-width, initial-scale=1.0">
         <header class="bg-blue-600 text-white shadow-lg">
             <div class="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div class="flex items-center space-x-2">
-                    <img src="logo.jpg"="https://place.c/50x50" alt="Company logo with modern blue and white design showing stylized human figures" class="rounded-full">
+
                     <h1 class="text-2xl font-bold">HR Dashboard</h1>
                 </div>
                 <nav>
