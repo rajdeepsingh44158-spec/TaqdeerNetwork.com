@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=de![logo](https://github.com/user-attachments/assets/69ba753b-87cd-4f6a-a839-241f363da54e)
+vice-width, initial-scale=1.0">
     <title>HR Dashboard - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
