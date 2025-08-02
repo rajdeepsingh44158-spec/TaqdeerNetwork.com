@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <header class="bg-blue-600 text-white shadow-lg">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="https://placehold.co/50x50" alt="Company logo with modern blue and white design showing stylized human figures" class="rounded-full">
+                    <h1 class="text-2xl font-bold">HR Dashboard</h1>
+                </div>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="home.html" class="px-3 py-2 rounded active">Home</a></li>
+                        <li><a href="employee.html" class="px-3 py-2 rounded hover:bg-blue-500">Employees</a></li>
+                        <li><a href="salary.html" class="px-3 py-2 rounded hover:bg-blue-500">Salary</a></li>
+                        <li><a href="attandance.html" class="px-3 py-2 rounded hover:bg-blue-500">Attandance</a></li>
+                        <li><a href="New hire.html" class="px-3 py-2 rounded hover:bg-blue-500">New Hire</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovatek - Employee Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+        }
+        
+        .employee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .value-card {
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        #searchResults {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Meet Our Team</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                Passionate professionals dedicated to innovation and excellence.
+            </p>
+            <div class="mt-10 flex justify-center space-x-4">
+                <a href="#directory" class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition duration-300">
+                    Find a Colleague
+                </a>
+                <a href="#values" class="bg-blue-700 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition duration-300">
+                    Our Culture
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Featured Employees -->
+    <section id="employees" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Employees</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Get to know some of the talented individuals who make our company great.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Employee 1 -->
+                <div class="employee-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                        <img src="https://placehold.co/300x300" alt="Portrait of Sarah Johnson, Senior Developer with short brown hair and glasses, smiling professionally" class="h-40 w-40 rounded-full border-4 border-white">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Sarah Johnson</h3>
+                        <p class="text-blue-600 font-medium">Senior Developer</p>
+                        <p class="text-gray-600 mt-3">Leads our engineering team with expertise in JavaScript and cloud architecture.</p>
+                        <div class="mt-4 flex justify-center space-x-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">JavaScript</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Cloud</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Employee 2 -->
+                <div class="employee-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center">
+                        <img src="https://placehold.co/300x300" alt="Portrait of Michael Chen, Marketing Director with dark hair and blue shirt, looking confident" class="h-40 w-40 rounded-full border-4 border-white">
+                    </div>
+                    <div class="p-6 text-center">
+                        
+                        <p class="text-gray-600 mt-3">Drives our brand strategy and digital marketing initiatives.</p>
+                        <div class="mt-4 flex justify-center space-x-3">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Strategy</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded">Branding</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SEO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Employee 3 -->
+                <div class="employee-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-700 flex items-center justify-center">
+                        <img src="https://placehold.co/300x300" alt="Portrait of David Ramirez, Product Manager with beard smiling casually in a meeting room" class="h-40 w-40 rounded-full border-4 border-white">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">David Ramirez</h3>
+                        <p class="text-purple-600 font-medium">Product Manager</p>
+                        <p class="text-gray-600 mt-3">Bridges user needs with technical solutions for impactful products.</p>
+                        <div class="mt-4 flex justify-center space-x-3">
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">UX</span>
+                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded">Agile</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Company Values -->
+    <section id="values" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    The principles that guide every decision we make and action we take.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div class="value-card bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
+                    <p class="text-gray-600">We embrace curiosity and champion new ideas that push boundaries and create lasting impact.</p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="value-card bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Collaboration</h3>
+                    <p class="text-gray-600">We believe our diverse talents create better solutions when we work together with trust and respect.</p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="value-card bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Integrity</h3>
+                    <p class="text-gray-600">We foster trust through transparency, honesty, and ethical conduct in all we do.</p>
+                </div>
+                
+                <!-- Value 4 -->
+                <div class="value-card bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
+                    <p class="text-gray-600">We take pride in our work and strive for the highest quality in everything we deliver.</p>
+                </div>
+                
+                <!-- Value 5 -->
+                <div class="value-card bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Learning</h3>
+                    <p class="text-gray-600">We cultivate continuous growth through feedback, mentorship, and challenging opportunities.</p>
+                </div>
+                
+                <!-- Value 6 -->
+                <div class="value-card bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Impact</h3>
+                    <p class="text-gray-600">We measure success by the positive difference we make for our customers and communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Employee Directory -->
+    <section id="directory" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Employee Directory</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Connect with colleagues across departments and locations.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <input type="text" id="searchInput" class="block w-full pl-10 pr-3 py-4 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Search by name, department, or skill...">
+                </div>
+                
+                <div id="searchResults" class="mt-6 hidden">
+                    <ul class="divide-y divide-gray-200">
+                        <!-- Results will be inserted here by JavaScript -->
+                    </ul>
+                </div>
+                
+                <div id="allEmployees" class="mt-12">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6">All Employees</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Departments will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-gradient-to-br from-blue-600 to-blue-800 p-12 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+                        <p class="mb-8 text-blue-100">
+                            Have questions about our team or want to learn more about working with us?
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-6 w-6 text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-blue-200">Email us</p>
+                                    <p class="text-blue-100">Ittechnicianhealthcare@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-6 w-6 text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-blue-200">Call us</p>
+                                    <p class="text-blue-100">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-6 w-6 text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-blue-200">Visit us</p>
+                                    <p class="text-blue-100">123 Tech Boulevard, Silicon Valley, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-12">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Send us a message</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" id="name" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                <select id="subject" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                    <option>General Inquiry</option>
+                                    <option>Career Opportunities</option>
+                                    <option>Press/Media</option>
+                                    <option>Partnerships</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" rows="4" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="flex justify-center md:justify-start">
+                    <img src="https://placehold.co/150x50" alt="Innovatek company logo white version with modern minimalist design" class="h-10">
+                </div>
+                <div class="mt-8 md:mt-0">
+                    <div class="flex justify-center md:justify-end space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 md:flex md:items-center md:justify-between">
+                <div class="text-center md:text-left">
+                    <p class="text-sm text-gray-400">
+                        &copy; 2023 Innovatek, Inc. All rights reserved.
+                    </p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <div class="flex justify-center md:justify-end space-x-6">
+                        <a href="#" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-sm text-gray-400 hover:text-white">Terms of Service</a>
+                        <a href="#" class="text-sm text-gray-400 hover:text-white">Careers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Employee data - in a real app this would come from an API
+        const employees = [
+            {
+                id: 1,
+                name: "Sarah Johnson",
+                position: "Senior Developer",
+                department: "Engineering",
+                email: "sarah.johnson@innovatek.com",
+                phone: "x1234",
+                skills: ["JavaScript", "React", "Cloud"],
+                image: "https://placehold.co/300x300"
+            },
+            {
+                id: 2,
+                name: "Michael Chen",
+                position: "Marketing Director",
+                department: "Marketing",
+                email: "michael.chen@innovatek.com",
+                phone: "x2345",
+                skills: ["Strategy", "Branding", "SEO"],
+                image: "https://placehold.co/300x300"
+            },
+            {
+                id: 3,
+                name: "David Ramirez",
+                position: "Product Manager",
+                department: "Product",
+                email: "david.ramirez@innovatek.com",
+                phone: "x3456",
+                skills: ["UX", "Agile", "Analytics"],
+                image: "https://placehold.co/300x300"
+            },
+            {
+                id: 4,
+                name: "Emma Wilson",
+                position: "UX Designer",
+                department: "Design",
+                email: "emma.wilson@innovatek.com",
+                phone: "x4567",
+                skills: ["UI Design", "Research", "Prototyping"],
+                image: "https://placehold.co/300x300"
+            },
+            {
+                id: 5,
+                name: "James Peterson",
+                position: "Data Scientist",
+                department: "Engineering",
+                email: "james.peterson@innovatek.com",
+                phone: "x5678",
+                skills: ["Python", "Machine Learning", "Data Visualization"],
+                image: "https://placehold.co/300x300"
+            },
+            {
+                id: 6,
+                name: "Lisa Wong",
+                position: "HR Manager",
+                department: "Human Resources",
+                email: "lisa.wong@innovatek.com",
+                phone: "x6789",
+                skills: ["Recruiting", "Training", "Employee Relations"],
+                image: "https://placehold.co/300x300"
+            },
+            {
+                id: 7,
+                name: "Robert Turner",
+                position: "Finance Director",
+                department: "Finance",
+                email: "robert.turner@innovatek.com",
+                phone: "x7890",
+                skills: ["Budgeting", "Forecasting", "Financial Analysis"],
+                image: "https://placehold.co/300x300"
+            },
+            {
+                id: 8,
+                name: "Amanda Lee",
+                position: "Sales Executive",
+                department: "Sales",
+                email: "amanda.lee@innovatek.com",
+                phone: "x8901",
+                skills: ["CRM", "Negotiation", "Account Management"],
+                image: "https://placehold.co/300x300"
+            }
+        ];
+        
+        // Group employees by department
+        const employeesByDepartment = {};
+        employees.forEach(employee => {
+            if (!employeesByDepartment[employee.department]) {
+                employeesByDepartment[employee.department] = [];
+            }
+            employeesByDepartment[employee.department].push(employee);
+        });
+        
+        // Render department sections
+        const allEmployeesContainer = document.getElementById('allEmployees');
+        const departmentsContainer = allEmployeesContainer.querySelector('div:last-child');
+        
+        Object.keys(employeesByDepartment).forEach(department => {
+            const departmentSection = document.createElement('div');
+            departmentSection.className = 'department-section';
+            
+            const heading = document.createElement('h4');
+            heading.className = 'text-lg font-semibold text-gray-800 mb-4';
+            heading.textContent = department;
+            
+            const employeeList = document.createElement('div');
+            employeeList.className = 'space-y-4';
+            
+            employeesByDepartment[department].forEach(employee => {
+                const employeeCard = document.createElement('div');
+                employeeCard.className = 'bg-gray-50 p-4 rounded-lg flex items-center shadow-sm';
+                
+                employeeCard.innerHTML = `
+                    <div class="flex-shrink-0">
+                        <img src="${employee.image}" alt="Portrait of ${employee.name}, ${employee.position} with description varying by employee" class="h-12 w-12 rounded-full">
+                    </div>
+                    <div class="ml-4">
+                        <h5 class="text-base font-medium text-gray-900">${employee.name}</h5>
+                        <p class="text-sm text-gray-600">${employee.position}</p>
+                        <div class="mt-1 flex items-center text-xs text-gray-500">
+                            <svg class="h-3 w-3 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            ${employee.email}
+                        </div>
+                    </div>
+                `;
+                
+                employeeList.appendChild(employeeCard);
+            });
+            
+            departmentSection.appendChild(heading);
+            departmentSection.appendChild(employeeList);
+            departmentsContainer.appendChild(departmentSection);
+        });
+        
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+        
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            if (searchTerm.length < 2) {
+                searchResults.classList.add('hidden');
+                searchResults.innerHTML = '';
+                allEmployees.classList.remove('hidden');
+                return;
+            }
+            
+            allEmployees.classList.add('hidden');
+            searchResults.classList.remove('hidden');
+            
+            const filteredEmployees = employees.filter(employee => 
+                employee.name.toLowerCase().includes(searchTerm) || 
+                employee.position.toLowerCase().includes(searchTerm) || 
+                employee.department.toLowerCase().includes(searchTerm) ||
+                employee.skills.some(skill => skill.toLowerCase().includes(searchTerm))
+            );
+            
+            const resultsList = searchResults.querySelector('ul');
+            resultsList.innerHTML = '';
+            
+            if (filteredEmployees.length === 0) {
+                resultsList.innerHTML = '<li class="py-4 text-center text-gray-500">No employees found</li>';
+                return;
+            }
+            
+            filteredEmployees.forEach(employee => {
+                const listItem = document.createElement('li');
+                listItem.className = 'py-4 px-4 hover:bg-gray-50';
+                
+                listItem.innerHTML = `
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img src="${employee.image}" alt="Portrait of ${employee.name}, ${employee.position}" class="h-10 w-10 rounded-full">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-sm font-medium text-gray-900">${employee.name}</h4>
+                            <p class="text-sm text-gray-500">${employee.position} • ${employee.department}</p>
+                            <div class="mt-1 flex space-x-2">
+                                ${employee.skills.map(skill => `<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">${skill}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                resultsList.appendChild(listItem);
+            });
+        });
+ <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img src="https://placehold.co/150x50" alt="Innovatek company logo with modern blue gradient design and abstract tech symbol" class="h-10">
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#employees" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Our Team</a>
+                        <a href="#values" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Our Values</a>
+                        <a href="#directory" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Directory</a>
+                        <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </script>
+</body>
+</html>
+
